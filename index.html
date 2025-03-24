@@ -47,15 +47,37 @@
 <body class="bg-[#f7faf8] text-gray-900 min-h-screen">
     <!-- Header/Navigation -->
     <header class="sticky top-0 z-50 w-full border-b bg-[#f7faf8]/95 backdrop-blur">
-        <div class="container flex h-16 max-w-screen-xl items-center mx-auto px-4">
+        <div class="container flex h-16 max-w-screen-xl items-center justify-between mx-auto px-4">
             <a href="#" class="flex items-center font-semibold text-lg font-mono tracking-tight" id="typewriter-text">:></a>
-            <nav class="ml-auto flex gap-4 sm:gap-6">
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex gap-6">
                 <a href="#about" class="text-sm font-medium hover:text-primary">About</a>
                 <a href="#expertise" class="text-sm font-medium hover:text-primary">Expertise</a>
                 <a href="#portfolio" class="text-sm font-medium hover:text-primary">Portfolio</a>
                 <a href="content/nicole_annen_resume.pdf" class="text-sm font-medium hover:text-primary" target="_blank">Resume</a>
                 <a href="#contact" class="text-sm font-medium hover:text-primary">Contact</a>
             </nav>
+        </div>
+        
+        <!-- Mobile Navigation Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden bg-[#f7faf8] border-b">
+            <div class="container max-w-screen-xl mx-auto px-4 py-2">
+                <nav class="flex flex-col space-y-3">
+                    <a href="#about" class="text-sm font-medium hover:text-primary py-2">About</a>
+                    <a href="#expertise" class="text-sm font-medium hover:text-primary py-2">Expertise</a>
+                    <a href="#portfolio" class="text-sm font-medium hover:text-primary py-2">Portfolio</a>
+                    <a href="content/nicole_annen_resume.pdf" class="text-sm font-medium hover:text-primary py-2" target="_blank">Resume</a>
+                    <a href="#contact" class="text-sm font-medium hover:text-primary py-2">Contact</a>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -610,8 +632,24 @@
     </footer>
 
     <script>
-        // Typewriter animation for header
+        // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Typewriter animation for header
             const typewriterElement = document.getElementById('typewriter-text');
             const phrases = [
                 "Nicole Annen",
