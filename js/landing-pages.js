@@ -7,57 +7,41 @@ document.addEventListener('DOMContentLoaded', function() {
         
         [
             {
-                name: "Blue Margin Data Services",
-                url: "https://bluemargin.com/data-services",
+                name: "Blue Margin Talk Data",
+                url: "https://bluemargin.com/talkdata",
                 img: "images/bm-landing.png",
-                summary: "Conversion-optimized landing page for Blue Margin's data services, featuring clear value propositions and strategic CTAs.",
+                summary: "Strategic landing page for Blue Margin's data analytics consulting services with clear value propositions and conversion-optimized CTAs.",
                 metrics: "35% increase in lead generation"
             },
             {
-                name: "AI Data Preparation Guide",
-                url: "https://bluemargin.com/ai-guide",
-                img: "images/ai-guide-landing.png", 
-                summary: "Lead magnet landing page for AI data preparation guide, designed to capture qualified prospects.",
+                name: "Blue Margin Legal Data",
+                url: "https://bluemargin.com/legaldata",
+                img: "images/legal-landing.png", 
+                summary: "Specialized landing page targeting legal industry data challenges with industry-specific messaging and compliance solutions.",
                 metrics: "42% conversion rate"
             },
             {
-                name: "Dashboard Effect Podcast",
-                url: "https://dashboardeffect.com",
-                img: "images/podcast-landing.png",
-                summary: "Podcast landing page designed to grow subscriber base and showcase episode highlights.",
+                name: "Blue Margin Events",
+                url: "https://events.bluemargin.com",
+                img: "images/events-landing.png",
+                summary: "Comprehensive events portal showcasing Blue Margin's conference presence, webinars, and industry events.",
                 metrics: "130% ROI on ad spend"
             },
             {
-                name: "VMware Explore Event",
-                url: "#",
-                img: "images/vmware-landing.png",
-                summary: "Event-specific landing page for VMware Explore conference, driving booth visits and demo requests.",
+                name: "PitchAxis",
+                url: "https://pitchaxis.io",
+                img: "images/pitchaxis-landing.png",
+                summary: "My freelancing company's website showcasing B2B marketing services with service offerings and client testimonials.",
                 metrics: "250+ qualified leads"
-            },
-            {
-                name: "Spadafy VDI Services",
-                url: "#",
-                img: "images/spadafy-landing.png",
-                summary: "B2B landing page for VDI managed services, optimized for enterprise decision makers.",
-                metrics: "#1 SEO ranking achieved"
-            },
-            {
-                name: "Private Equity Data Intelligence",
-                url: "#",
-                img: "images/pe-landing.png",
-                summary: "Targeted landing page for private equity firms, showcasing data intelligence solutions.",
-                metrics: "60% engagement rate"
             }
         ].forEach(item => {
             const div = document.createElement('div');
             div.className = "border border-gray-300 rounded-lg bg-white shadow-sm hover:shadow-md transition-all cursor-pointer group";
             
-            // Make the entire card clickable if URL exists
-            if (item.url && item.url !== '#') {
-                div.onclick = function() {
-                    window.open(item.url, '_blank');
-                };
-            }
+            // Make the entire card clickable
+            div.onclick = function() {
+                window.open(item.url, '_blank');
+            };
             
             div.innerHTML = `
                 <div class="p-4">
@@ -75,18 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                     <p class="text-sm text-gray-600 leading-relaxed">${item.summary}</p>
-                    ${item.url && item.url !== '#' ? `
-                        <div class="mt-3 flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
-                            <span class="mr-1">View Landing Page</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </div>
-                    ` : `
-                        <div class="mt-3 text-gray-400 text-sm">
-                            Internal project
-                        </div>
-                    `}
+                    <div class="mt-3 flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
+                        <span class="mr-1">View Landing Page</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </div>
                 </div>
             `;
             landingPagesList.appendChild(div);
