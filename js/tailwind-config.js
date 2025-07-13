@@ -4,22 +4,22 @@ tailwind.config = {
         extend: {
             colors: {
                 primary: {
-                    DEFAULT: '#9ac5b1',
-                    foreground: 'hsl(210 40% 98%)',
+                    DEFAULT: '#FF6B5A',
+                    foreground: '#FFFFFF',
                 },
                 secondary: {
-                    DEFAULT: 'hsl(150 20% 92%)',
-                    foreground: '#9ac5b1',
+                    DEFAULT: '#f9fafb',
+                    foreground: '#000000',
                 },
                 muted: {
-                    DEFAULT: 'hsl(150 30% 95%)',
-                    foreground: 'hsl(150 20% 40%)',
+                    DEFAULT: '#f9fafb',
+                    foreground: '#4b5563',
                 },
-                border: 'hsl(214.3 31.8% 91.4%)',
+                border: '#d1d5db',
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                mono: ['Roboto Mono', 'monospace'],
+                sans: ['Inter', 'system-ui', 'sans-serif'],
+                heading: ['Satoshi', 'Inter', 'system-ui', 'sans-serif'],
             },
         },
     },
