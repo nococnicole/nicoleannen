@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "build": "echo 'Build complete - static site ready for deployment'",
-    "start": "python3 -m http.server 3000",
-    "dev": "python3 -m http.server 3000"
+    "start": "npx serve -s . -l 3000",
+    "dev": "npx serve -s . -l 3000"
   },
   "keywords": ["portfolio", "marketing", "website"],
   "author": "Nicole Annen",
