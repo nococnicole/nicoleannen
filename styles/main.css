@@ -4,5 +4,3 @@ h1, h2, h3 { font-family: 'Satoshi', 'Inter', 'system-ui', sans-serif; }
 .section-fade.visible { opacity: 1; transform: translateY(0); }
 .portfolio-card { transition: all 0.3s ease; }
 .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(255, 107, 90, 0.1); }
-.portfolio-overlay { opacity: 0; transition: opacity 0.3s ease; }
-.portfolio-card:hover .portfolio-overlay { opacity: 1; }
