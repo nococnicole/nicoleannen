@@ -10,29 +10,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 name: "Blue Margin - Talk Data",
                 url: "https://bluemargin.com/talkdata",
                 img: "images/bm-landing.png",
-                summary: "Landing page for Blue Margin's Talk Data initiative, designed to engage prospects in data conversations.",
-                metrics: "High engagement rate"
+                summary: "Landing page for Blue Margin's Talk Data initiative, designed to engage prospects in data conversations."
             },
             {
                 name: "Blue Margin - Legal Data",
                 url: "https://bluemargin.com/legaldata",
                 img: "images/ai-guide-landing.png", 
-                summary: "Specialized landing page for Blue Margin's legal data services and solutions.",
-                metrics: "Targeted conversion"
+                summary: "Specialized landing page for Blue Margin's legal data services and solutions."
             },
             {
                 name: "Blue Margin Events",
                 url: "https://events.bluemargin.com",
                 img: "images/podcast-landing.png",
-                summary: "Event registration and information landing page for Blue Margin's conferences and webinars.",
-                metrics: "Event registrations"
+                summary: "Event registration and information landing page for Blue Margin's conferences and webinars."
             },
             {
                 name: "PitchAxis",
                 url: "https://pitchaxis.io",
                 img: "images/pitchaxis-landing.png",
-                summary: "My freelancing company landing page showcasing B2B tech marketing services and expertise.",
-                metrics: "Lead generation"
+                summary: "My freelancing company landing page showcasing B2B tech marketing services and expertise."
             }
         ].forEach(item => {
             const div = document.createElement('div');
@@ -55,9 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                         <div class="flex-grow">
                             <h4 class="text-lg font-semibold font-heading text-black group-hover:text-primary transition-colors">${item.name}</h4>
-                            <div class="inline-block bg-primary/10 text-primary text-xs px-2 py-1 rounded-full mt-1">
-                                ${item.metrics}
-                            </div>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600 leading-relaxed">${item.summary}</p>
