@@ -1,0 +1,16 @@
+{
+  "name": "nicole-annen-portfolio",
+  "version": "1.0.0",
+  "description": "Nicole Annen's Marketing Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build complete - static site ready for deployment'",
+    "start": "python3 -m http.server 3000",
+    "dev": "python3 -m http.server 3000"
+  },
+  "keywords": ["portfolio", "marketing", "website"],
+  "author": "Nicole Annen",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
