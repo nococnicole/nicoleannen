@@ -7,46 +7,32 @@ document.addEventListener('DOMContentLoaded', function() {
         
         [
             {
-                name: "Blue Margin Data Services",
-                url: "https://bluemargin.com/data-services",
+                name: "Blue Margin - Talk Data",
+                url: "https://bluemargin.com/talkdata",
                 img: "images/bm-landing.png",
-                summary: "Conversion-optimized landing page for Blue Margin's data services, featuring clear value propositions and strategic CTAs.",
-                metrics: "35% increase in lead generation"
+                summary: "Landing page for Blue Margin's Talk Data initiative, designed to engage prospects in data conversations.",
+                metrics: "High engagement rate"
             },
             {
-                name: "AI Data Preparation Guide",
-                url: "https://bluemargin.com/ai-guide",
+                name: "Blue Margin - Legal Data",
+                url: "https://bluemargin.com/legaldata",
                 img: "images/ai-guide-landing.png", 
-                summary: "Lead magnet landing page for AI data preparation guide, designed to capture qualified prospects.",
-                metrics: "42% conversion rate"
+                summary: "Specialized landing page for Blue Margin's legal data services and solutions.",
+                metrics: "Targeted conversion"
             },
             {
-                name: "Dashboard Effect Podcast",
-                url: "https://dashboardeffect.com",
+                name: "Blue Margin Events",
+                url: "https://events.bluemargin.com",
                 img: "images/podcast-landing.png",
-                summary: "Podcast landing page designed to grow subscriber base and showcase episode highlights.",
-                metrics: "130% ROI on ad spend"
+                summary: "Event registration and information landing page for Blue Margin's conferences and webinars.",
+                metrics: "Event registrations"
             },
             {
-                name: "VMware Explore Event",
-                url: "#",
-                img: "images/vmware-landing.png",
-                summary: "Event-specific landing page for VMware Explore conference, driving booth visits and demo requests.",
-                metrics: "250+ qualified leads"
-            },
-            {
-                name: "Spadafy VDI Services",
-                url: "#",
-                img: "images/spadafy-landing.png",
-                summary: "B2B landing page for VDI managed services, optimized for enterprise decision makers.",
-                metrics: "#1 SEO ranking achieved"
-            },
-            {
-                name: "Private Equity Data Intelligence",
-                url: "#",
-                img: "images/pe-landing.png",
-                summary: "Targeted landing page for private equity firms, showcasing data intelligence solutions.",
-                metrics: "60% engagement rate"
+                name: "PitchAxis",
+                url: "https://pitchaxis.io",
+                img: "images/pitchaxis-landing.png",
+                summary: "My freelancing company landing page showcasing B2B tech marketing services and expertise.",
+                metrics: "Lead generation"
             }
         ].forEach(item => {
             const div = document.createElement('div');
