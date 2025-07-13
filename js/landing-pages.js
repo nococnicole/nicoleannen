@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         [
             {
+                name: "PitchAxis Marketing Services",
+                url: "https://pitchaxis.com",
+                img: "images/pitchaxis-landing.png",
+                summary: "Full-service B2B marketing agency landing page showcasing comprehensive marketing solutions for tech companies.",
+                metrics: "Founded 2016"
+            },
+            {
                 name: "Blue Margin Data Services",
                 url: "https://bluemargin.com/data-services",
                 img: "images/bm-landing.png",
