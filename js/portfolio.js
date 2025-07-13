@@ -21,12 +21,12 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Hide the main portfolio grid
             if (portfolioCardsContainer) {
-                portfolioCardsContainer.style.display = 'none';
+                portfolioCardsContainer.classList.add('hidden');
             }
             
             // Hide all category contents first
             categoryContents.forEach(content => {
-                content.style.display = 'none';
+                content.classList.add('hidden');
                 console.log('Hiding content:', content.id);
             });
             
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Target content element:', targetContent);
             
             if (targetContent) {
-                targetContent.style.display = 'block';
+                targetContent.classList.remove('hidden');
                 console.log('Showing content:', targetContent.id);
             } else {
                 console.error('Target content not found for category:', category);
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Show back button
             if (backButton) {
-                backButton.style.display = 'block';
+                backButton.classList.remove('hidden');
             }
         });
     });
@@ -58,17 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Hide all category contents
             categoryContents.forEach(content => {
-                content.style.display = 'none';
+                content.classList.add('hidden');
                 console.log('Hiding content on back:', content.id);
             });
             
             // Show the main portfolio grid
             if (portfolioCardsContainer) {
-                portfolioCardsContainer.style.display = 'grid';
+                portfolioCardsContainer.classList.remove('hidden');
             }
             
             // Hide back button
-            backButton.style.display = 'none';
+            backButton.classList.add('hidden');
         });
     }
 });
