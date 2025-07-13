@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const categoryCards = document.querySelectorAll('.category-card');
     const categoryContents = document.querySelectorAll('.category-content');
     const backButton = document.getElementById('back-to-categories');
-    // Use a more specific selector to target only the grid in the portfolio section
     const portfolioCardsContainer = document.querySelector('#portfolio .grid');
     
     console.log('Category cards found:', categoryCards.length);
@@ -20,14 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // Set flag to indicate a portfolio item is selected
             window.portfolioItemSelected = true;
             
-            // Hide all cards
+            // Hide the main portfolio grid
             if (portfolioCardsContainer) {
-                portfolioCardsContainer.classList.add('hidden');
+                portfolioCardsContainer.style.display = 'none';
             }
             
             // Hide all category contents first
             categoryContents.forEach(content => {
-                content.classList.add('hidden');
+                content.style.display = 'none';
                 console.log('Hiding content:', content.id);
             });
             
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Target content element:', targetContent);
             
             if (targetContent) {
-                targetContent.classList.remove('hidden');
+                targetContent.style.display = 'block';
                 console.log('Showing content:', targetContent.id);
             } else {
                 console.error('Target content not found for category:', category);
@@ -44,15 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Show back button
             if (backButton) {
-                backButton.classList.remove('hidden');
-            }
-            
-            // Ensure About section remains visible
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-                aboutSection.classList.add('visible');
-                aboutSection.style.opacity = '1';
-                aboutSection.style.transform = 'translateY(0)';
+                backButton.style.display = 'block';
             }
         });
     });
@@ -67,28 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Hide all category contents
             categoryContents.forEach(content => {
-                content.classList.add('hidden');
+                content.style.display = 'none';
                 console.log('Hiding content on back:', content.id);
             });
             
-            // Show all cards
+            // Show the main portfolio grid
             if (portfolioCardsContainer) {
-                portfolioCardsContainer.classList.remove('hidden');
+                portfolioCardsContainer.style.display = 'grid';
             }
             
             // Hide back button
-            backButton.classList.add('hidden');
-            
-            // Make sure all sections are visible when returning to main view
-            document.querySelectorAll('.section-fade').forEach(section => {
-                section.classList.add('visible');
-                
-                // Remove any inline styles we added
-                if (section.id === 'about') {
-                    section.style.opacity = '';
-                    section.style.transform = '';
-                }
-            });
+            backButton.style.display = 'none';
         });
     }
 });
