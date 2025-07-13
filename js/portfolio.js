@@ -23,8 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 content.classList.add('hidden');
             });
             
-            // Show selected category content
-            document.getElementById(`${category}-content`).classList.remove('hidden');
+            // Show selected category content with a small delay to ensure proper rendering
+            setTimeout(() => {
+                const targetContent = document.getElementById(`${category}-content`);
+                if (targetContent) {
+                    targetContent.classList.remove('hidden');
+                }
+            }, 50);
             
             // Show back button
             backButton.classList.remove('hidden');
