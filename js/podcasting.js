@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         [
             {
                 name: "YouTube",
-                url: "https://youtube.com/@nicoleannen",
+                url: "https://www.youtube.com/@thedashboardeffectpodcast",
                 img: "images/youtube.png"
             },
             {
