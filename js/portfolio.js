@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'podcasting':
                     targetPage = 'podcasting.html';
                     break;
+                case 'one-pagers':
+                    targetPage = 'one-pagers.html';
+                    break;
                 default:
                     targetPage = `${category}.html`;
             }
