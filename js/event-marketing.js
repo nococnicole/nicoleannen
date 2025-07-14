@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 img: "images/ValueTechBooth.jpg",
                 modalImages: ["images/ValueTechBooth.jpg"],
                 summary: "Booth design for Value Technology Alliance at blockchain and cryptocurrency conferences."
+            },
+            {
+                name: "Blue Margin Lunch and Learn - Preparing Your Data for AI",
+                img: "images/1750893501285.jpg",
+                modalImages: ["images/1750893501285.jpg", "images/1750893501869.jpg"],
+                summary: "Lunch and Learn event for Blue Margin at Elways in Denver, focusing on preparing data for AI implementation."
             }
         ].forEach((item, index) => {
             const li = document.createElement('li');
