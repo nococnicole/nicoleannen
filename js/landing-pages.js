@@ -43,15 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             div.innerHTML = `
                 <div class="p-4">
-                    <div class="flex items-start gap-3 mb-3">
-                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                        </div>
-                        <div class="flex-grow">
-                            <h4 class="text-lg font-semibold font-heading text-black group-hover:text-primary transition-colors">${item.name}</h4>
-                        </div>
+                    <div class="mb-4">
+                        <h4 class="text-lg font-semibold font-heading text-black group-hover:text-primary transition-colors">${item.name}</h4>
                     </div>
                     <p class="text-sm text-gray-600 leading-relaxed">${item.summary}</p>
                     ${item.url && item.url !== '#' ? `
