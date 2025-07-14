@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'landing-pages':
                     targetSectionId = 'landing-pages-list';
                     break;
+                case 'podcasting':
+                    targetSectionId = 'podcast-list';
+                    break;
                 default:
                     targetSectionId = category;
             }
