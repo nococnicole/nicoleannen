@@ -2,3 +2,26 @@
 h1, h2, h3 { font-family: 'Satoshi', 'Inter', 'system-ui', sans-serif; }
 .section-fade { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .section-fade.visible { opacity: 1; transform: translateY(0); }
+
+/* Tools scrolling animation */
+.tools-scroll-container {
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.tools-scroll-track {
+    animation: scroll 30s linear infinite;
+}
+
+.tools-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
