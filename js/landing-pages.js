@@ -9,30 +9,30 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 name: "Blue Margin - Talk Data",
                 url: "https://bluemargin.com/talkdata",
-                img: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=400",
+                img: "images/bm-landing.png",
                 summary: "Landing page for Blue Margin's Talk Data initiative, designed to engage prospects in data conversations."
             },
             {
                 name: "Blue Margin - Legal Data",
                 url: "https://bluemargin.com/legaldata",
-                img: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=400",
+                img: "images/ai-guide-landing.png", 
                 summary: "Specialized landing page for Blue Margin's legal data services and solutions."
             },
             {
                 name: "Blue Margin Events",
                 url: "https://events.bluemargin.com",
-                img: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=400",
+                img: "images/podcast-landing.png",
                 summary: "Event registration and information landing page for Blue Margin's conferences and webinars."
             },
             {
                 name: "PitchAxis",
                 url: "https://pitchaxis.io",
-                img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
+                img: "images/pitchaxis-landing.png",
                 summary: "My freelancing company landing page showcasing B2B tech marketing services and expertise."
             }
         ].forEach(item => {
             const div = document.createElement('div');
-            div.className = "border border-gray-300 rounded-lg bg-white shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer group overflow-hidden";
+            div.className = "border border-gray-300 rounded-lg bg-white shadow-sm hover:shadow-md transition-all cursor-pointer group";
             
             // Make the entire card clickable if URL exists
             if (item.url && item.url !== '#') {
@@ -42,26 +42,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             div.innerHTML = `
-                <div class="relative overflow-hidden">
-                    <img src="${item.img}" alt="${item.name}" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                </div>
                 <div class="p-4">
-                    <div class="mb-3">
-                        <h4 class="text-lg font-semibold font-heading text-black group-hover:text-primary transition-colors mb-2">${item.name}</h4>
-                        <div class="flex items-center gap-2 text-sm text-gray-500">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0 9c-1.657 0-3-4.03-3-9s1.343-9 3-9m0 9c1.657 0 3 4.03 3 9s-1.343 9-3-9"></path>
+                    <div class="flex items-start gap-3 mb-3">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            <span>Landing Page</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-lg font-semibold font-heading text-black group-hover:text-primary transition-colors">${item.name}</h4>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600 leading-relaxed">${item.summary}</p>
                     ${item.url && item.url !== '#' ? `
-                        <div class="mt-4 flex items-center justify-between">
-                            <span class="text-primary text-sm font-medium group-hover:translate-x-1 transition-transform flex items-center">
-                                <span class="mr-1">View Live Site</span>
-                            </span>
+                        <div class="mt-3 flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform">
+                            <span class="mr-1">View Landing Page</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                             </svg>
@@ -69,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ` : `
                         <div class="mt-3 text-gray-400 text-sm">
                             Internal project
-                        </div> 
+                        </div>
                     `}
                 </div>
             `;
