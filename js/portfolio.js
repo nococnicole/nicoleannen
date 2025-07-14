@@ -15,10 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
             let targetSectionId;
             switch(category) {
                 case 'digital-marketing':
-                    targetSectionId = 'videos-list'; // or whatever the actual ID is
+                    targetSectionId = 'videos-list';
                     break;
                 case 'event-marketing':
                     targetSectionId = 'event-marketing-list';
+                    break;
+                case 'landing-pages':
+                    targetSectionId = 'landing-pages-list';
                     break;
                 default:
                     targetSectionId = category;
