@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="p-3">
                     <div class="flex items-center gap-2">
                         <img src="${item.img}" alt="${item.name}" class="w-12 h-12 object-cover rounded" />
-                        <h4 class="text-base font-medium">${item.name}</h4>
                         <h4 class="text-base font-medium font-heading text-black">${item.name}</h4>
                     </div>
                     <p class="text-xs text-gray-600 mt-2">${item.summary}</p>
@@ -103,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="p-3">
                     <div class="flex items-center gap-2">
                         <img src="${item.img}" alt="${item.name}" class="w-12 h-12 object-cover rounded" />
-                        <h4 class="text-base font-medium">${item.name}</h4>
                         <h4 class="text-base font-medium font-heading text-black">${item.name}</h4>
                     </div>
                     <p class="text-xs text-gray-600 mt-2">${item.summary}</p>
