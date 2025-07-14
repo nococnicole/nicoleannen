@@ -1,45 +1,37 @@
 // Portfolio navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Category cards functionality - change to navigation instead of hide/show
+    // Category cards functionality - navigate to dedicated pages
     const categoryCards = document.querySelectorAll('.category-card');
     
     console.log('Category cards found:', categoryCards.length);
     
-    // Add click event to category cards for navigation
+    // Add click event to category cards for navigation to dedicated pages
     categoryCards.forEach(card => {
         card.addEventListener('click', () => {
             const category = card.getAttribute('data-category');
-            console.log('Navigating to category:', category);
+            console.log('Navigating to category page:', category);
             
-            // Map category names to actual section IDs that exist in the HTML
-            let targetSectionId;
+            // Navigate to dedicated page
+            let targetPage;
             switch(category) {
                 case 'digital-marketing':
-                    targetSectionId = 'videos-list';
+                    targetPage = 'digital-marketing.html';
                     break;
                 case 'event-marketing':
-                    targetSectionId = 'event-marketing-list';
+                    targetPage = 'event-marketing.html';
                     break;
                 case 'landing-pages':
-                    targetSectionId = 'landing-pages-list';
+                    targetPage = 'landing-pages.html';
                     break;
                 case 'podcasting':
-                    targetSectionId = 'podcast-list';
+                    targetPage = 'podcasting.html';
                     break;
                 default:
-                    targetSectionId = category;
+                    targetPage = `${category}.html`;
             }
             
-            // Navigate to the category section
-            const targetSection = document.getElementById(targetSectionId);
-            if (targetSection) {
-                targetSection.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            } else {
-                console.error('Target section not found:', targetSectionId);
-            }
+            // Navigate to the dedicated page
+            window.location.href = targetPage;
         });
     });
 });
